@@ -1,0 +1,39 @@
+#Program to interchange first and last elements of a list.
+def interchange(list1):
+    list1[0],list1[-1] = list1[-1],list1[0]
+    return list1
+print(interchange([1,2,3,4,5,6]))
+
+#Print maximum string of length inside a string
+def max_len(sentence):
+    list1 = sentence.split(' ')
+    max_len = -1
+    for element in list1:
+        if len(element) > max_len:
+            max_len = len(element)
+            item = element
+    return item
+    
+print(max_len('Hello My name is Ninza and I am a developer'))
+
+#Fibonacci
+def fibonnacci():
+    list1 = []
+    num = int(input('Enter number of terms:\n'))
+    val1 = 0
+    val2 = 1
+    for i in range(num):
+        list1.append(val1)
+        sum = val1 + val2
+        val1,val2 = val2,sum
+    return(list1)
+print(fibonnacci())
+
+#Horizontal triangle
+def pattern(n):
+    for i in range(n):
+        print('*'*i)
+    for i in range(n-2,0,-1):
+        print('*'*i)
+pattern(7)
+
